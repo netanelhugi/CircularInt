@@ -311,11 +311,11 @@ class CircularInt{
     friend CircularInt operator << (const CircularInt &a,const CircularInt &b);
 
     //CircularInt>>int//#13
-    friend CircularInt operator >> (const CircularInt &a,int b);
+    friend CircularInt& operator >> (const CircularInt &a,int b);
     //int>>CircularInt//#14
-    friend CircularInt operator >> (int b,const CircularInt &a);
+    friend CircularInt& operator >> (int b,const CircularInt &a);
     //CircularInt>>CircularInt//#15
-    friend CircularInt operator >> (const CircularInt &a,const CircularInt &b);
+    friend CircularInt& operator >> (const CircularInt &a,const CircularInt &b);
 
 
     
@@ -744,21 +744,21 @@ inline CircularInt operator << (const CircularInt &a,const CircularInt &b) {//#1
 ///////////////////////////////////////
 ///Bitwise right shift (<<) operator///
 ///////////////////////////////////////
-inline CircularInt operator >> (const CircularInt &a,int b) {//#13
+inline CircularInt& operator >> (const CircularInt &a,int b) {//#13
     CircularInt ci{a.lowNum,a.highNum};
     ci.now = ci.getRealVal(a.now>>b);
     
     return ci;
 }
 
-inline CircularInt operator >> (int b,const CircularInt &a) {//#14
+inline CircularInt& operator >> (int b,const CircularInt &a) {//#14
     CircularInt ci{a.lowNum,a.highNum};
     ci.now = ci.getRealVal(b>>a.now);
     
     return ci;
 }
 
-inline CircularInt operator >> (const CircularInt &a,const CircularInt &b) {//#15
+inline CircularInt& operator >> (const CircularInt &a,const CircularInt &b) {//#15
     CircularInt ci{a.lowNum,a.highNum};
     ci.now = ci.getRealVal(a.now>>b.now);
     
