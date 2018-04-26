@@ -323,7 +323,7 @@ class CircularInt{
 
     /////////////////////////////////////////
     //////Compound assignment operators//////
-    //////////////////////////////////////////
+    //////////////////////////////////////////  
     CircularInt& operator+=(const int& other){//CircularInt+=int
         this->now = getRealVal(now+other);
 
@@ -825,6 +825,10 @@ inline CircularInt operator >> (const CircularInt &a,const CircularInt &b) {//#1
 //int "toString" function
 inline ostream& operator << (ostream& os, const CircularInt& c) {
     return (os << c.getNow());
+}
+
+inline istream& operator >> (istream& is, const CircularInt& c) {
+    return (is);
 }
 
 // //bool "toString" function
