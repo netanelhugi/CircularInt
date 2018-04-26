@@ -828,7 +828,7 @@ inline ostream& operator << (ostream& os, const CircularInt& c) {
 }
 
 inline istream& operator >> (istream& is, const CircularInt& c) {
-    return (is);
+    return (is >> c);
 }
 
 // //bool "toString" function
