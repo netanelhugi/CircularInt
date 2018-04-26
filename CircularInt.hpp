@@ -814,7 +814,7 @@ inline CircularInt operator >> (const CircularInt &a,const CircularInt &b) {//#1
 
     inline bool operator<=(int b,CircularInt a) {
         
-        if(a.getNow()!>=a.getRealVal(b)){
+        if(a.getNow()>=a.getRealVal(b)){
                 return true;
             }
 
