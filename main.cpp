@@ -278,55 +278,45 @@ int main() {
 	// BitwiseOperatorsTest();
 	// CompoundOperatorsTest();
 
-	CircularInt cii;
-	
-	cout << cii << " t" << endl;
-
-	cin >> cii;
-
-	cout << endl;
-
-	cout << cii << " t" << endl;
-
 	CircularInt hour {1, 12};                 // <hour is an integer between 1 and 12, like an hour on the clock>
-	// CircularInt hour2 {5,25};
+	CircularInt hour2 {5,25};
 
-	// hour += hour2;
+	hour += hour2;
 
-	// hour2 = hour;
+	hour2 = hour;
 
-	// bool a = hour==hour2;
+	bool a = hour==hour2;
 
-	// hour = 10;
-	// hour2 = 10;
-	// int a0 = 4;
-	// int a2 = 0;
-	// int a1 = a2&&a0;
+	hour = 10;
+	hour2 = 10;
+	int a0 = 4;
+	int a2 = 0;
+	int a1 = a2&&a0;
 
-	// cout << hour << endl;
+	cout << hour << endl;
 
 
-	// CircularInt ci = hour2&hour;
+	CircularInt ci = hour2&hour;
 
-	// cout << a1 << endl;
+	cout << a1 << endl;
 
-	// 	cout << hour << endl;                     // 1
+		cout << hour << endl;                     // 1
 
 	
-	// hour += 4;  cout << hour << endl;         // 5
-	// (hour += 2)++;  cout << hour << endl;     // 8
-	// hour += 18;   cout << hour << endl;       // 2   (18 hours after 8)
-	// cout << -hour << endl;                    // 10  (2 hours before midnight)
-	// hour = 1 - hour; cout << hour << endl;    // 11  (2 hours before 1)
-	// cout << hour+hour << endl;                // 10 (11 hours after 11)
-	// hour *= 2;   cout << hour << endl;        // 10 (11*2 = 11+11)
-	// cout << hour/2 << endl;                   // TWO OPTIONS: 11 (since 11*2=10) or 5 (since 5*2=10 too).
+	hour += 4;  cout << hour << endl;         // 5
+	(hour += 2)++;  cout << hour << endl;     // 8
+	hour += 18;   cout << hour << endl;       // 2   (18 hours after 8)
+	cout << -hour << endl;                    // 10  (2 hours before midnight)
+	hour = 1 - hour; cout << hour << endl;    // 11  (2 hours before 1)
+	cout << hour+hour << endl;                // 10 (11 hours after 11)
+	hour *= 2;   cout << hour << endl;        // 10 (11*2 = 11+11)
+	cout << hour/2 << endl;                   // TWO OPTIONS: 11 (since 11*2=10) or 5 (since 5*2=10 too).
 
-	// try {
-	// 	cout << hour/3;
-	// } catch (const string& message) {
-	// 	cout << message << endl;     // "There is no number x in {1,12} such that x*3=10"
-	// }
+	try {
+		cout << hour/3;
+	} catch (const string& message) {
+		cout << message << endl;     // "There is no number x in {1,12} such that x*3=10"
+	}
 
 	// RIDDLES (not for submission): 
 	//  * when is there exactly one answer to a/b?

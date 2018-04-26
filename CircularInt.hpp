@@ -767,7 +767,10 @@ inline CircularInt operator >> (const CircularInt &a,const CircularInt &b) {//#1
     return ci;
 }
 
-/////////////////////////////
+////////////////////////////////////////
+//////Friends Comparison operators//////
+////////////////////////////////////////
+
 
     inline bool operator==(int b,CircularInt a) {
         
@@ -829,6 +832,7 @@ inline ostream& operator << (ostream& os, const CircularInt& c) {
     return (os << c.getNow());
 }
 
+//input to CircularInt function
 inline istream& operator >> (istream& is, CircularInt& c) {
     int i = 0;
     is >> i; 
