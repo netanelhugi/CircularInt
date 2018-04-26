@@ -159,6 +159,9 @@ class CircularInt{
         return true;
     }
 
+    friend bool operator != (int b,CircularInt a);//int!=CircularInt
+
+
     bool operator>(const int& other){//CircularInt>int
 
         if(this->now>getRealVal(other)){
@@ -755,6 +758,15 @@ inline CircularInt operator >> (const CircularInt &a,const CircularInt &b) {//#1
     inline bool operator==(int b,CircularInt a) {
         
         if(a.getNow()==a.getRealVal(b)){
+                return true;
+            }
+
+            return false;
+    }
+
+    inline bool operator!=(int b,CircularInt a) {
+        
+        if(a.getNow()!=a.getRealVal(b)){
                 return true;
             }
 
