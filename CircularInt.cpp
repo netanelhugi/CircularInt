@@ -14,6 +14,7 @@ CircularInt::CircularInt(int low, int high){
 CircularInt::CircularInt(){
     highNum = 12;
     lowNum = 1;
+    now = lowNum;
 }
 
 int CircularInt::getHigh(){
@@ -30,6 +31,12 @@ int CircularInt::getDiff(){
 
 int CircularInt::getNow() const{
     return this->now;
+}
+
+void CircularInt::setNow(int n){
+
+    this->now = this->getRealVal(n);
+
 }
 
 //function to determine the appropriate value

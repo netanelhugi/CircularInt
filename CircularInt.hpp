@@ -25,6 +25,8 @@ class CircularInt{
     //get the low value of CircularInt
     int getLow();
     int getDiff();
+    //setNow
+    void setNow(int n);
 
     //-------------------------------------
     // operators
@@ -827,17 +829,15 @@ inline ostream& operator << (ostream& os, const CircularInt& c) {
     return (os << c.getNow());
 }
 
-inline istream& operator >> (istream& is, const CircularInt& c) {
-    return (is >> c);
+inline istream& operator >> (istream& is, CircularInt& c) {
+    int i = 0;
+    is >> i; 
+    c.setNow(i);
+
+    return is;
 }
 
-// //bool "toString" function
-// inline ostream& operator << (ostream& os,const bool& c) {
-//     if(c==1){
-//         return (os << "True");
-//     }
-//     return (os << "False");
-// }
+
 
 
 
