@@ -11,7 +11,6 @@ class CircularInt{
     int diff;
     int now;
     
-
     public:
     //constructors
     CircularInt(int low,int high);
@@ -596,6 +595,67 @@ inline CircularInt operator % (const CircularInt &a,const CircularInt &b) {//#15
 
 
 
+////////////////////////////////////////
+//////Friends Comparison operators//////
+////////////////////////////////////////
+
+
+    inline bool operator==(int b,CircularInt a) {
+        
+        if(a.getNow()==a.getRealVal(b)){
+                return true;
+            }
+
+            return false;
+    }
+
+    inline bool operator!=(int b,CircularInt a) {
+        
+        if(a.getNow()!=a.getRealVal(b)){
+                return true;
+            }
+
+            return false;
+    }
+
+    inline bool operator>(int b,CircularInt a) {
+        
+        if(a.getNow()<a.getRealVal(b)){
+                return true;
+            }
+
+            return false;
+    }
+
+    inline bool operator>=(int b,CircularInt a) {
+        
+        if(a.getNow()<=a.getRealVal(b)){
+                return true;
+            }
+
+            return false;
+    }
+
+    inline bool operator<(int b,CircularInt a) {
+        
+        if(a.getNow()>a.getRealVal(b)){
+                return true;
+            }
+
+            return false;
+    }
+
+    inline bool operator<=(int b,CircularInt a) {
+        
+        if(a.getNow()>=a.getRealVal(b)){
+                return true;
+            }
+
+            return false;
+    }
+
+
+
 /////////////////////////////////////
 //////Friends Logical operators//////
 /////////////////////////////////////
@@ -767,65 +827,14 @@ inline CircularInt operator >> (const CircularInt &a,const CircularInt &b) {//#1
     return ci;
 }
 
-////////////////////////////////////////
-//////Friends Comparison operators//////
-////////////////////////////////////////
 
 
-    inline bool operator==(int b,CircularInt a) {
-        
-        if(a.getNow()==a.getRealVal(b)){
-                return true;
-            }
 
-            return false;
-    }
 
-    inline bool operator!=(int b,CircularInt a) {
-        
-        if(a.getNow()!=a.getRealVal(b)){
-                return true;
-            }
 
-            return false;
-    }
-
-    inline bool operator>(int b,CircularInt a) {
-        
-        if(a.getNow()<a.getRealVal(b)){
-                return true;
-            }
-
-            return false;
-    }
-
-    inline bool operator>=(int b,CircularInt a) {
-        
-        if(a.getNow()<=a.getRealVal(b)){
-                return true;
-            }
-
-            return false;
-    }
-
-    inline bool operator<(int b,CircularInt a) {
-        
-        if(a.getNow()>a.getRealVal(b)){
-                return true;
-            }
-
-            return false;
-    }
-
-    inline bool operator<=(int b,CircularInt a) {
-        
-        if(a.getNow()>=a.getRealVal(b)){
-                return true;
-            }
-
-            return false;
-    }
-
+//////////////////////////////////
+//////Output&Input functions//////
+//////////////////////////////////
 
 //int "toString" function
 inline ostream& operator << (ostream& os, const CircularInt& c) {
