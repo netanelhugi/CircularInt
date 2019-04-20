@@ -1,6 +1,10 @@
 # CircularInt
 
+## Assignment 5 - C++ Course
 
-Assignment 5
+In this task, we implemented a class an integer in a circular calculation.
+For more information see the assignment instruction file (Hebrew)
 
-C++ Course
+## How to compile:
+```
+make
